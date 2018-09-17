@@ -21,7 +21,7 @@ public class CharacterMove : MonoBehaviour {
 	}
 
 	void FixedUpdate () {
-		Grounded = Physics2D.OverLapCircle(Groundcheck.position, GroundCheckRadius, WhatIsGround);
+		Grounded = Physics2D.OverlapCircle(Groundcheck.position, GroundCheckRadius, WhatIsGround);
 	}
 
 	
@@ -32,8 +32,17 @@ public class CharacterMove : MonoBehaviour {
 		if(Input.GetKeyDown (KeyCode.Space)&& grounded){
 			Jump();
 		}
-		
+
+		//this code makes the character move from side to side with the AD keys
+		if(Input.GetKey (KeyCode.D)){
+			GetComponent<RigidBody2D>().velocity = new Vector2(MoveSpeed, GetComponent<Rigidbody2D>().velocity.y);
+		}
+		if(Input.GetKeyDown(KeyCode.A)){
+			GetComponent<RigidBody2D>().velocity = new Vector2(MoveSpeed, GetComponent<Rigidbody2D>().velocity.y);
+		}
+
 	}
+
 	public void Jump(){
 		GetComponent<RigidBody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, JumpHeight);
 	}
