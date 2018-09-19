@@ -29,22 +29,22 @@ public class CharacterMove : MonoBehaviour {
 	void Update () {
 
 		// This code makes the character jump
-		if(Input.GetKeyDown (KeyCode.Space)&& grounded){
+		if(Input.GetKeyDown (KeyCode.Space)&& Grounded){
 			Jump();
 		}
 
 		//this code makes the character move from side to side with the AD keys
 		if(Input.GetKey (KeyCode.D)){
-			GetComponent<RigidBody2D>().velocity = new Vector2(MoveSpeed, GetComponent<Rigidbody2D>().velocity.y);
+			GetComponent<Rigidbody2D>().velocity = new Vector2(MoveSpeed, GetComponent<Rigidbody2D>().velocity.y);
 		}
 		if(Input.GetKeyDown(KeyCode.A)){
-			GetComponent<RigidBody2D>().velocity = new Vector2(MoveSpeed, GetComponent<Rigidbody2D>().velocity.y);
+			GetComponent<Rigidbody2D>().velocity = new Vector2(-MoveSpeed, GetComponent<Rigidbody2D>().velocity.y);
 		}
 
 	}
 
 	public void Jump(){
-		GetComponent<RigidBody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, JumpHeight);
+		GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, JumpHeight);
 	}
 }
 
