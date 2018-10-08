@@ -4,13 +4,28 @@ using UnityEngine;
 
 public class Calculator : MonoBehaviour {
 
-	// Use this for initialization
+	public int x;
+	public int y;
+	private int total;
+	private int toatl2;
+
+	
+	
+	public void Subtract(int x, int y){
+
+		total = x - y;
+
+		print(total);
+
+	}
+
 	void Start () {
 		
+		CalculatorSubtract();
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
+	public void CalculatorSubtract(){
+
+		Subtract(x, y);
 	}
 }
