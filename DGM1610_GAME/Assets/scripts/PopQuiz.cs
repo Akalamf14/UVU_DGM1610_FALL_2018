@@ -35,6 +35,8 @@ public class PopQuiz : MonoBehaviour {
 		Total3 = x * y + n;
 
 		print(Total3);
+
+		
 		
 	}
 
