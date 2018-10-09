@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Calculator : MonoBehaviour {
 
+<<<<<<< HEAD
 	public int x;
 	public int y;
 	private int total;
@@ -27,5 +28,15 @@ public class Calculator : MonoBehaviour {
 	public void CalculatorSubtract(){
 
 		Subtract(x, y);
+=======
+	// Use this for initialization
+	void Start () {
+		
+	}
+	
+	// Update is called once per frame
+	void Update () {
+		
+>>>>>>> master
 	}
 }

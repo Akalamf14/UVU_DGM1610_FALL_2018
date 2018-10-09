@@ -22,7 +22,11 @@ public class LevelManager : MonoBehaviour {
 
 	//use this for initialization
 	void start(){
+<<<<<<< HEAD
 		// Player = FindObjectOfType<Rigidbody2D> ();
+=======
+		Player = FindObjectOfType<Rigidbody2D> ();
+>>>>>>> master
 	}
 
 	public void RespawnPlayer(){
@@ -30,8 +34,9 @@ public class LevelManager : MonoBehaviour {
 
 	}
 
-	public IEnumerator RespawnPlayerCo(){
+	//public IEnumerator RespawnPlayerCo(){
 		//generate death particle
+<<<<<<< HEAD
 		Instantiate (DeathParticle, Player.transform.position, Player.transform.rotation);
 		//player .enabled = false;
 		Player.GetComponent<Renderer>().enabled = false;
@@ -56,5 +61,8 @@ public class LevelManager : MonoBehaviour {
 
 	}
 
+=======
+		//Instantiate (DeathParticle, Player.transform.position, Player.transform.rotation);
+>>>>>>> master
 	
 }
