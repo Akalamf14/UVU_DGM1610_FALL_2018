@@ -7,7 +7,7 @@ public class fruit : food {
 public float sweetness;
 public bool seeds;
 public bool pit;
-public color fruitcolor;
+public Color fruitcolor;
 
 
 }

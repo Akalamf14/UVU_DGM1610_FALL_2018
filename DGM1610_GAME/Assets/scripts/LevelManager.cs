@@ -31,7 +31,7 @@ public class LevelManager : MonoBehaviour {
 
 	}
 
-	//public IEnumerator RespawnPlayerCo(){
+	public IEnumerator RespawnPlayerCo(){
 		//generate death particle
 		Instantiate (DeathParticle, Player.transform.position, Player.transform.rotation);
 		//player .enabled = false;
@@ -57,6 +57,5 @@ public class LevelManager : MonoBehaviour {
 
 	}
 
-		//Instantiate (DeathParticle, Player.transform.position, Player.transform.rotation
 	
 }
