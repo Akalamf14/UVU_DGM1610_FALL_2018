@@ -11,12 +11,15 @@ public class Conditionals : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		
-		if(Weather == "raining")
+		if(Weather == "raining"){
 			print("Weather is" + Weather);
-		else if( Weather == "snowing")
+		}
+		else if( Weather == "snowing"){
 			print("Weather is" + Weather);
-		else if(Weather == "Sunny")
+		}
+		else if(Weather == "Sunny"){
 			print("Weather is" + Weather);
+		}
 	
 	}
 	
