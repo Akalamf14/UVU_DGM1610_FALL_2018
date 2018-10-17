@@ -18,12 +18,12 @@ public class LevelManager : MonoBehaviour {
 	public int PointPenaltyOnDeath;
 
 	//Store Gravity Value
-	private float GravityStore;
+	private float StoreGravity;
 
 	//use this for initialization
 	void start(){
 		// Player = FindObjectOfType<Rigidbody2D> ();
-		Player = FindObjectOfType<Rigidbody2D> ();
+		//Player = FindObjectOfType<Rigidbody2D> ();
 	}
 
 	public void RespawnPlayer(){
@@ -37,7 +37,7 @@ public class LevelManager : MonoBehaviour {
 		//player .enabled = false;
 		Player.GetComponent<Renderer>().enabled = false;
 		// gravity Reset
-		gravityStore = Player.GetComponent<Rigidbody2D>().gravityScale;
+		StoreGravity = Player.GetComponent<Rigidbody2D>().gravityScale;
 		Player.GetComponent<Rigidbody2D>().gravityScale =0f;
 		Player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 		// point penalty
@@ -47,7 +47,7 @@ public class LevelManager : MonoBehaviour {
 		// Respawn Delay
 		yield return new WaitForSeconds (RespawnDelay);
 		// Gravity Restore
-		Player.GetComponent<Rigidbody2D>().gravityScale = gravityStore;
+		Player.GetComponent<Rigidbody2D>().gravityScale = StoreGravity;
 		// match Players transform position
 		Player.transform.position = CurrentCheckPoint.transform.position;
 		//show player
