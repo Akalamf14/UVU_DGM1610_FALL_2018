@@ -378,6 +378,10 @@ Prefab:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1240825229066152, guid: 6e220a00120b8134cb6901701edb3b17, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e220a00120b8134cb6901701edb3b17, type: 2}
   m_IsPrefabAsset: 0
@@ -5142,6 +5146,7 @@ GameObject:
   m_Component:
   - component: {fileID: 811379162}
   - component: {fileID: 811379161}
+  - component: {fileID: 811379163}
   m_Layer: 0
   m_Name: sun
   m_TagString: Untagged
@@ -5208,6 +5213,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &811379163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 811379160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89e62ecdf4de67c4d8bca29d38ea25f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  num: 40
 --- !u!1 &874846560
 GameObject:
   m_ObjectHideFlags: 0
@@ -5224,7 +5241,7 @@ GameObject:
   - component: {fileID: 874846561}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5272,7 +5289,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 0.17, y: 0.17}
   m_EdgeRadius: 0
 --- !u!61 &874846563
 BoxCollider2D:
@@ -5735,7 +5752,7 @@ GameObject:
   - component: {fileID: 1579964299}
   - component: {fileID: 1579964298}
   - component: {fileID: 1579964301}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: shell 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6058,6 +6075,7 @@ GameObject:
   - component: {fileID: 1866772549}
   - component: {fileID: 1866772548}
   - component: {fileID: 1866772547}
+  - component: {fileID: 1866772550}
   - component: {fileID: 1866772546}
   m_Layer: 0
   m_Name: Projectiles
@@ -6154,12 +6172,28 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1866772545}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.112787, y: 2.4159997, z: 2.083969}
+  m_LocalPosition: {x: -8.47, y: -5.38, z: 2.083969}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1866772550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1866772545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 505a7b173f5b55a4fa9ff3490f228129, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 50
+  PC: {fileID: 1980976013}
+  EnemyDeath: {fileID: 574745033}
+  ProjectilesParticle: {fileID: 1866772545}
+  PointForKill: 5
 --- !u!1 &1980976012
 GameObject:
   m_ObjectHideFlags: 0
@@ -6192,7 +6226,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 4
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
