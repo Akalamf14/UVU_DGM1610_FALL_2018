@@ -13,14 +13,17 @@ public class WhilePracticeScript : MonoBehaviour {
 
 		while(dogs < 100){
 			print(dogs + "barking");
+			dogs --;
 		}
 
 		while(cats > 0){
 			print(cats + "cats");
+			cats ++;
 		}
 
-		while(5 > hamsters > 1){
+		while(hamsters < 5){
 			print(hamsters + "hamsters");
+			hamsters --;
 		}
 
 		
