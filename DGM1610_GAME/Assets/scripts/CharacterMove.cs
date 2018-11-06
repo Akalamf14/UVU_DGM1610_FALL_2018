@@ -49,6 +49,13 @@ public class CharacterMove : MonoBehaviour {
 		//Non-Stick Player
 		movevelocity = 0f;
 
+		//Player flip
+			if(GetComponent<Rigidbody2D>().velocity.x > 0)
+				transform.localScale = new Vector3(8f, 8f, 5f);
+
+			else if (GetComponent<Rigidbody2D>().velocity.x < 0)
+				transform.localScale = new Vector3(-8f, 8f, 5f);
+
 
 		//this code makes the character move from side to side with the AD keys
 		if(Input.GetKey (KeyCode.D)){
