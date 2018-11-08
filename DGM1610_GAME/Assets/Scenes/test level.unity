@@ -202,6 +202,53 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   x: 15
   y: 4
+--- !u!1 &28628807
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 28628809}
+  - component: {fileID: 28628808}
+  m_Layer: 0
+  m_Name: Game Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &28628808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 28628807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25b8bd61ee7d87d4581eb8b71f9e8987, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentCheckPoint: {fileID: 2049858303}
+  Player: {fileID: 1980976013}
+  Player2: {fileID: 1980976012}
+  DeathParticle: {fileID: 574745033}
+  RespawnParticle: {fileID: 574745033}
+  RespawnDelay: 3
+  PointPenaltyOnDeath: 1
+--- !u!4 &28628809
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 28628807}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.232619, y: 2.2856, z: 2.2663188}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &84321841 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1240825229066152, guid: 6e220a00120b8134cb6901701edb3b17,
@@ -5407,7 +5454,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fed3e97c52f910c4c938bc32a1f488bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelManager: {fileID: 1980976018}
+  LevelManager: {fileID: 0}
 --- !u!1 &928217643
 GameObject:
   m_ObjectHideFlags: 0
@@ -6188,7 +6235,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1866772545}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.47, y: -5.38, z: 2.083969}
+  m_LocalPosition: {x: -3.78, y: -6.19, z: 2.083969}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -6222,7 +6269,6 @@ GameObject:
   - component: {fileID: 1980976014}
   - component: {fileID: 1980976013}
   - component: {fileID: 1980976017}
-  - component: {fileID: 1980976018}
   - component: {fileID: 1980976019}
   m_Layer: 0
   m_Name: PC
@@ -6355,23 +6401,6 @@ MonoBehaviour:
   WhatIsGround:
     serializedVersion: 2
     m_Bits: 256
---- !u!114 &1980976018
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1980976012}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25b8bd61ee7d87d4581eb8b71f9e8987, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CurrentCheckPoint: {fileID: 2049858303}
-  Player: {fileID: 1980976013}
-  DeathParticle: {fileID: 574745033}
-  RespawnParticle: {fileID: 574745033}
-  RespawnDelay: 3
-  PointPenaltyOnDeath: 1
 --- !u!114 &1980976019
 MonoBehaviour:
   m_ObjectHideFlags: 0

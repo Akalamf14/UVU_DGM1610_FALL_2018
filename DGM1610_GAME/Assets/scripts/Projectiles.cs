@@ -30,7 +30,13 @@ public class Projectiles : MonoBehaviour {
 			ScoreManager.AddPoints(PointForKill);
 		}
 
+		Destroy(gameObject);
+	}
+
+	void OnCollisionEnter2D(Collision2D other){
+
 		Instantiate(ProjectilesParticle, transform.position, transform.rotation);
 		Destroy(gameObject);
+
 	}
 }
