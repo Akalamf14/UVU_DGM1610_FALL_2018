@@ -13,6 +13,6 @@ public class HealthPickup : MonoBehaviour {
 
 		HealthManager.SubtractPoints(PointsToSubtract);
 
-		Destroy(GameObject);
+		Destroy(gameObject);
 	}
 }
