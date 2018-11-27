@@ -25,6 +25,8 @@ public class Projectiles : MonoBehaviour {
 			Speed = -Speed;
 
 		Destroy(gameObject,timeOut);
+
+		
 	}
 
 

@@ -29,4 +29,6 @@ public class AmmoManager : MonoBehaviour {
 	public static void AddPoints (int PointsToAdd){
 		Ammo += PointsToAdd;
 	}
+
+	
 }
