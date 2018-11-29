@@ -23,11 +23,15 @@ public class AmmoManager : MonoBehaviour {
 		if(Ammo < 0)
 			Ammo = 0;
 		
-		AmmoText.text = " " + Ammo;
+		AmmoText.text = "Ammo " + Ammo;
 		
 	}
 	public static void AddPoints (int PointsToAdd){
 		Ammo += PointsToAdd;
+	}
+
+	public static void SubtractPoints (int PointsToSubtract){
+		Ammo -= PointsToSubtract;
 	}
 
 	

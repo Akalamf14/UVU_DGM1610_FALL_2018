@@ -6,6 +6,8 @@ public class PlayerShoot : MonoBehaviour {
 
 	public Transform FirePoint;
 	public GameObject Projectiles;
+	public int PointsToSubtract;
+	
 
 
 	// Use this for initialization
@@ -15,7 +17,15 @@ public class PlayerShoot : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(Input.GetKeyDown(KeyCode.RightControl))
+
+		
+		if(Input.GetKeyDown(KeyCode.RightControl) && AmmoManager.Ammo > 0){
+			AmmoManager.SubtractPoints(PointsToSubtract);
 			Instantiate(Projectiles, FirePoint.position, FirePoint.rotation);
+		}
+
+	
+			
 	}
+
 }
