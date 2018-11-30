@@ -10,6 +10,8 @@ public class LevelManager : MonoBehaviour {
 
 	public GameObject Player2;
 
+	public int PointsToSubtract;
+
 	// Particles
 	public GameObject DeathParticle;
 	public GameObject RespawnParticle;
