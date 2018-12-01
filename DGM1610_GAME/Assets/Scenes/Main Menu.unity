@@ -491,14 +491,14 @@ RectTransform:
   m_GameObject: {fileID: 777763123}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2318, y: 1.2318, z: 1.2318}
   m_Children: []
   m_Father: {fileID: 463908575}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0.000061035, y: -38}
+  m_AnchoredPosition: {x: 0.000061035, y: -61}
   m_SizeDelta: {x: 631.4, y: 49.700012}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &777763125
@@ -521,7 +521,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: b55f067b51f5a5c47b1f0207c6f4b744, type: 3}
     m_FontSize: 35
     m_FontStyle: 0
     m_BestFit: 0
@@ -533,7 +533,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Title of Game
+  m_Text: ISland escape 2.0
 --- !u!222 &777763126
 CanvasRenderer:
   m_ObjectHideFlags: 0

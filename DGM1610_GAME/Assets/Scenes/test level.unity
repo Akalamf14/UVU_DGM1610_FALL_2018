@@ -321,7 +321,7 @@ MonoBehaviour:
   CurrentCheckPoint: {fileID: 2049858303}
   Player: {fileID: 1980976013}
   Player2: {fileID: 1980976012}
-  PointsToSubtract: 0
+  PointsToSubtract: 1
   DeathParticle: {fileID: 574745033}
   RespawnParticle: {fileID: 574745033}
   RespawnDelay: 3
@@ -333,7 +333,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 28628807}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.232619, y: 2.2856, z: 2.2663188}
+  m_LocalPosition: {x: -39.6, y: 20, z: 2.2663188}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -721,6 +721,11 @@ Prefab:
       propertyPath: m_Name
       value: Enemy (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 114718692663617778, guid: ff55ed9725b674c4b971209cd5533680,
+        type: 2}
+      propertyPath: LevelManager
+      value: 
+      objectReference: {fileID: 28628808}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff55ed9725b674c4b971209cd5533680, type: 2}
   m_IsPrefabAsset: 0
@@ -908,7 +913,7 @@ GameObject:
   - component: {fileID: 501056687}
   - component: {fileID: 501056686}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Death Fall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1161,23 +1166,6 @@ Prefab:
     - target: {fileID: 1133655244510064, guid: 6e220a00120b8134cb6901701edb3b17, type: 2}
       propertyPath: m_Name
       value: Coin (5)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4703322769350064, guid: 6e220a00120b8134cb6901701edb3b17, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 9.53347
-      objectReference: {fileID: 0}
-    - target: {fileID: 4703322769350064, guid: 6e220a00120b8134cb6901701edb3b17, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 9.53347
-      objectReference: {fileID: 0}
-    - target: {fileID: 4703322769350064, guid: 6e220a00120b8134cb6901701edb3b17, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 46.590797
-      objectReference: {fileID: 0}
-    - target: {fileID: 114195428924418872, guid: 6e220a00120b8134cb6901701edb3b17,
-        type: 2}
-      propertyPath: PointsToAdd
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e220a00120b8134cb6901701edb3b17, type: 2}
@@ -2254,6 +2242,11 @@ Prefab:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 114231700203529748, guid: 8e55d75820e36094a9d2c38f2bd28fad,
+        type: 2}
+      propertyPath: LevelManager
+      value: 
+      objectReference: {fileID: 28628808}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e55d75820e36094a9d2c38f2bd28fad, type: 2}
   m_IsPrefabAsset: 0
@@ -3687,6 +3680,11 @@ Prefab:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 114231700203529748, guid: 8e55d75820e36094a9d2c38f2bd28fad,
+        type: 2}
+      propertyPath: LevelManager
+      value: 
+      objectReference: {fileID: 28628808}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e55d75820e36094a9d2c38f2bd28fad, type: 2}
   m_IsPrefabAsset: 0
@@ -3820,6 +3818,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 36
       objectReference: {fileID: 0}
+    - target: {fileID: 114718692663617778, guid: ff55ed9725b674c4b971209cd5533680,
+        type: 2}
+      propertyPath: LevelManager
+      value: 
+      objectReference: {fileID: 28628808}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff55ed9725b674c4b971209cd5533680, type: 2}
   m_IsPrefabAsset: 0

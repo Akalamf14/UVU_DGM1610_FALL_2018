@@ -33,6 +33,7 @@ public class LevelManager : MonoBehaviour {
 
 	public void RespawnPlayer(){
 		StartCoroutine ("RespawnPlayerCo");
+		
 
 	}
 
@@ -48,6 +49,7 @@ public class LevelManager : MonoBehaviour {
 		Player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 		// point penalty
 		ScoreManager.AddPoints(-PointPenaltyOnDeath);
+		HealthManager.SubtractPoints(PointsToSubtract);
 		// Debug message
 		Debug.Log("Player Respawn");
 		// Respawn Delay
