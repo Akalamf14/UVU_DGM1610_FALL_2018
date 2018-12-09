@@ -14,16 +14,18 @@ public class HealthManager : MonoBehaviour {
 		HealthText = GetComponent<Text>();
 
 		Health = 3;
+
 		
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
-
+		if(Health < 0)
+			Health = 0;
+		
+		HealthText.text = "Health " + Health;
 		
 	}
-
 	public static void AddPoints (int PointsToAdd){
 		Health += PointsToAdd;
 	}
@@ -32,4 +34,5 @@ public class HealthManager : MonoBehaviour {
 		Health -= PointsToSubtract;
 	}
 
+	
 }

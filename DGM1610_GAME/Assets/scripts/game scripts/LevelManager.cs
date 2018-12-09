@@ -6,11 +6,10 @@ using UnityEngine;
 public class LevelManager : MonoBehaviour {
 
 	public GameObject CurrentCheckPoint;
-	public Rigidbody2D Player;
+	
 
 	public GameObject Player2;
 
-	public int PointsToSubtract;
 
 	// Particles
 	public GameObject DeathParticle;
@@ -21,6 +20,7 @@ public class LevelManager : MonoBehaviour {
 
 	//Point Penalty on Death
 	public int PointPenaltyOnDeath;
+	public int HealthSubtractOnDeath;
 
 	//Store Gravity Value
 	private float StoreGravity;
@@ -39,28 +39,28 @@ public class LevelManager : MonoBehaviour {
 
 	public IEnumerator RespawnPlayerCo(){
 		//generate death particle
-		Instantiate (DeathParticle, Player.transform.position, Player.transform.rotation);
+		Instantiate (DeathParticle, Player2.transform.position, Player2.transform.rotation);
 		//player .enabled = false
 		Player2.SetActive(false);
-		Player.GetComponent<Renderer>().enabled = false;
+		Player2.GetComponent<Renderer>().enabled = false;
 		// gravity Reset
-		StoreGravity = Player.GetComponent<Rigidbody2D>().gravityScale;
-		Player.GetComponent<Rigidbody2D>().gravityScale =0f;
-		Player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+		StoreGravity = Player2.GetComponent<Rigidbody2D>().gravityScale;
+		Player2.GetComponent<Rigidbody2D>().gravityScale =0f;
+		Player2.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 		// point penalty
 		ScoreManager.AddPoints(-PointPenaltyOnDeath);
-		HealthManager.SubtractPoints(PointsToSubtract);
+		HealthManager.AddPoints(-HealthSubtractOnDeath);
 		// Debug message
 		Debug.Log("Player Respawn");
 		// Respawn Delay
 		yield return new WaitForSeconds (RespawnDelay);
 		// Gravity Restore
-		Player.GetComponent<Rigidbody2D>().gravityScale = StoreGravity;
+		Player2.GetComponent<Rigidbody2D>().gravityScale = StoreGravity;
 		// match Players transform position
-		Player.transform.position = CurrentCheckPoint.transform.position;
+		Player2.transform.position = CurrentCheckPoint.transform.position;
 		//show player
 		Player2.SetActive(true);
-		Player.GetComponent<Renderer> ().enabled = true;
+		Player2.GetComponent<Renderer> ().enabled = true;
 		// Spawn particle
 		Instantiate (RespawnParticle, CurrentCheckPoint.transform.position, CurrentCheckPoint.transform.rotation);
 
